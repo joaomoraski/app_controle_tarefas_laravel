@@ -15,7 +15,7 @@ class Tarefa extends Model
         'data_limite_conclusao',
     ];
 
-    public function usuario(){
-
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }

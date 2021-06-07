@@ -5,7 +5,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Tarefas <a href="{{ route('tarefa.create') }}" class="float-right">Novo</a></div>
+                    <div class="card-header">Tarefas
+                        <a href="{{ route('tarefa.create') }}" class="float-right">Novo</a>
+                        <a href="{{ route('tarefa.exportacao', ['extensao' => 'csv']) }}" class="float-right mr-2">CSV</a>
+                        <a href="{{ route('tarefa.exportacao', ['extensao' => 'xlsx']) }}" class="float-right mr-2">XLSX</a>
+                        <a href="{{ route('tarefa.exportacao', ['extensao' => 'pdf']) }}" class="float-right mr-2">PDF</a>
+                        <a href="{{ route('tarefa.export') }}" target="_blank" class="float-right mr-2">PDF - DOMPDF</a>
+                    </div>
 
                     <div class="card-body">
                         <table class="table text-center">
